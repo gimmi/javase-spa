@@ -12,7 +12,11 @@ module.exports = {
             'angular-material',
             'angular-material/angular-material.css'
         ],
-        app: "./src/App.js"
+        app: "./src/App.js",
+        specs: [
+            'jasmine-core/lib/jasmine-core/jasmine.css',
+            './src/Specs.js'
+        ]
     },
     devtool: 'source-map',
     output: {
@@ -26,10 +30,17 @@ module.exports = {
     },
     plugins: [
         new webpack.optimize.CommonsChunkPlugin({
-            name: ['app', 'vendor']
+            name: ['specs', 'app', 'vendor']
         }),
         new HtmlWebpackPlugin({ 
             template: './src/index.html', 
+            filename: 'index.html',
+            inject: 'head',
+            excludeChunks: ['specs']
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/specs.html', 
+            filename: 'specs.html',
             inject: 'head'
         })
     ],
