@@ -1,6 +1,9 @@
 {
   "name": "javase-spa",
   "version": "1.0.0",
+  "description": "javase-spa",
+  "repository": {},
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "webpack-dev-server",
     "webpack": "webpack"
