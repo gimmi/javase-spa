@@ -13,10 +13,7 @@ module.exports = {
             'angular-material/angular-material.css'
         ],
         app: "./src/App.js",
-        specs: [
-            'jasmine-core/lib/jasmine-core/jasmine.css',
-            './src/Specs.js'
-        ]
+        specs: './src/Specs.js'
     },
     devtool: 'source-map',
     output: {
@@ -38,11 +35,7 @@ module.exports = {
             inject: 'head',
             excludeChunks: ['specs']
         }),
-        new HtmlWebpackPlugin({
-            template: './src/specs.html', 
-            filename: 'specs.html',
-            inject: 'head'
-        })
+        new HtmlWebpackPlugin({ filename: 'specs.html' })
     ],
     devServer: {
         proxy: {
