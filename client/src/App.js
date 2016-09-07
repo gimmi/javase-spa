@@ -2,9 +2,9 @@ var angular = require('angular');
 var ngRoute = require('angular-route');
 
 module.exports = angular.module('app', [ ngRoute ])
-	.controller('AppCtrl', require('./AppCtrl'))
+	.component('homeComponent', require('./homeComponent'))
 	.config(function ($routeProvider) {
 		$routeProvider
-			.when('/home', { template: require('raw!./AppCtrl.html') })
+			.when('/home', { template: '<home-component></home-component>' })
 			.otherwise('/home');
 	});
