@@ -1,5 +1,5 @@
 module.exports = {
-    template: require('raw!./HomeComponent.html'),
+    template: require('./HomeComponent.html'),
     controller: function () {
         var ctrl = this;
 
