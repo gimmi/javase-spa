@@ -6,10 +6,7 @@ module.exports = {
         vendor: [
             'angular',
             'angular-route',
-            'angular-aria',
-            'angular-animate',
-            'angular-material',
-            'angular-material/angular-material.css'
+            'bootstrap/dist/css/bootstrap.css'
         ],
         app: "./src/App.js",
         specs: './src/Specs.js'
@@ -23,6 +20,7 @@ module.exports = {
         loaders: [
             { test: /\.css$/, loaders: ['style', 'css'] },
             { test: /\.html$/, loader: 'raw' },
+            { test: /\.(eot|woff|woff2|ttf|svg)$/, loader: 'file' }
         ]
     },
     plugins: [

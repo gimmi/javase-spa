@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "css-loader": "^0.24.0",
+    "file-loader": "^0.9.0",
     "html-webpack-plugin": "^2.22.0",
     "jasmine-core": "^2.5.0",
     "raw-loader": "^0.5.1",
@@ -19,9 +20,7 @@
   },
   "dependencies": {
     "angular": "^1.5.8",
-    "angular-animate": "^1.5.8",
-    "angular-aria": "^1.5.8",
-    "angular-material": "^1.1.0",
-    "angular-route": "^1.5.8"
+    "angular-route": "^1.5.8",
+    "bootstrap": "^3.3.7"
   }
 }
