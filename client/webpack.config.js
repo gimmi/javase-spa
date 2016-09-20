@@ -8,8 +8,8 @@ module.exports = {
             'angular-route',
             'bootstrap/dist/css/bootstrap.css'
         ],
-        app: "./src/App.js",
-        specs: './src/Specs.js'
+        app: "./src/app.module.js",
+        specs: './src/browser-specs-bundle.js'
     },
     devtool: 'source-map',
     output: {
