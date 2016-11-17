@@ -27,6 +27,8 @@ public class JavasespaConfig extends WebMvcConfigurerAdapter {
     public Gson gson() {
         GsonBuilder gsonBuilder = new GsonBuilder();
         com.fatboyindustrial.gsonjavatime.Converters.registerAll(gsonBuilder);
-        return gsonBuilder.setPrettyPrinting().create();
+        return gsonBuilder.setPrettyPrinting()
+            .disableHtmlEscaping() // http://stackoverflow.com/questions/23363843
+            .create();
     }
 }
