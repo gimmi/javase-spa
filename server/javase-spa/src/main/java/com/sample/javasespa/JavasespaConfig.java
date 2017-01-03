@@ -23,6 +23,12 @@ public class JavasespaConfig extends WebMvcConfigurerAdapter {
         converters.add(converter);
     }
 
+    @Override
+    public void configurePathMatch(PathMatchConfigurer cfg) {
+        // See http://stackoverflow.com/a/23938850/66629
+        cfg.setUseSuffixPatternMatch(false);
+    }
+
     @Bean
     public Gson gson() {
         GsonBuilder gsonBuilder = new GsonBuilder();
