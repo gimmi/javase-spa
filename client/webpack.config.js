@@ -1,5 +1,6 @@
-var webpack = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -13,14 +14,14 @@ module.exports = {
     },
     devtool: 'source-map',
     output: {
-        path: './dist',
+        path: path.resolve(__dirname, 'dist'),
         filename: "[name].[chunkhash].js"
     },
     module: {
-        loaders: [
-            { test: /\.css$/, loaders: ['style', 'css'] },
-            { test: /\.html$/, loader: 'raw' },
-            { test: /\.(eot|woff|woff2|ttf|svg)$/, loader: 'file' }
+        rules: [
+            { test: /\.css$/, use: ['style-loader', 'css-loader'] },
+            { test: /\.html$/, use: ['raw-loader'] },
+            { test: /\.(eot|woff|woff2|ttf|svg)(\?\S*)?$/, use: ['file-loader'] }
         ]
     },
     plugins: [
@@ -38,6 +39,7 @@ module.exports = {
     devServer: {
         proxy: {
             '/api': {
+                // logLevel: 'debug',
                 target: 'http://127.0.0.1:8078'
             }
         }
