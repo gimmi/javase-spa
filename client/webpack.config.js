@@ -6,8 +6,12 @@ module.exports = {
     entry: {
         vendor: [
             'angular',
-            'angular-route',
-            'bootstrap/dist/css/bootstrap.css'
+            'angular-aria',
+            'angular-animate',
+            'angular-messages',
+            'angular-material',
+            'angular-material/angular-material.css',
+            'angular-route'
         ],
         app: "./src/app.module.js",
         specs: './src/browser-specs-bundle.js'
