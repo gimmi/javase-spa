@@ -6,9 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>App</title>
+    <!-- https://material.angularjs.org/latest/CSS/typography -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet">
 </head>
 
-<body ng-app="app">
+<body ng-app="app" layout="column">
+    <md-toolbar layout="row" class="md-toolbar-tools">
+        <h1>Angular Material - Starter </h1>
+    </md-toolbar>
+    <div flex layout="row">
+        <md-sidenav md-is-locked-open="true" md-whiteframe>
+            <md-list>
+                <md-list-item ng-click="null">
+                    <span>Single Row Item</span>
+                    <md-icon class="md-secondary" md-font-library="material-icons">chevron_right</md-icon>
+                </md-list-item>
+                <md-list-item ng-click="null">
+                    <span>Single Row Item</span>
+                    <md-icon class="md-secondary" md-font-library="material-icons">chevron_right</md-icon>
+                </md-list-item>
+                <md-list-item ng-click="null">
+                    <span>Single Row Item blah blah blah blah blah blah blah blah</span>
+                    <md-icon class="md-secondary" md-font-library="material-icons">chevron_right</md-icon>
+                </md-list-item>
+            </md-list>
+        </md-sidenav>
+        <md-content flex>
+            Content
+        </md-content>
+    </div>
 </body>
 
 </html>

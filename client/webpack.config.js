@@ -11,7 +11,8 @@ module.exports = {
             'angular-messages',
             'angular-material',
             'angular-material/angular-material.css',
-            'angular-route'
+            'angular-route',
+            'material-design-icons/iconfont/material-icons.css'
         ],
         app: "./src/app.module.js",
         specs: './src/browser-specs-bundle.js'
